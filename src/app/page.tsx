@@ -1,11 +1,11 @@
-
+import Hero from "@/components/hero";
+import Services from "@/components/services";
 
 export default function Home() {
   return (
-
-    <div className="flex flex-col items-center justify-center h-screen">
-           <h1 className="text-4xl font-bold">LArquitectura</h1>
-           <p className="text-lg">Sitio web de la empresa LArquitectura en barquisimeto venezuela</p>
-    </div>
+    <>
+      <Hero />
+      <Services />
+    </>
   );
 }
