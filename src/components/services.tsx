@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import {roboto} from "@/components/ui/fonts"
 export default function services(){
     return (
         // Este div se asegura de que la sección se renderice sobre el hero fijado
@@ -19,14 +19,14 @@ export default function services(){
 
             <div className=" flex flex-col lg:flex-row justify-between items-center mt-0 lg:mt-50  w-full px-5 lg:px-15">
                 <div>
-                    <h1 className="text-[2.5rem] font-bold mb-5">
+                    <h1 className="text-[2.5rem] font-bold mb-5 lg:text-left text-center">
                         TE OFRECEMOS
                     </h1>
                     
                 </div>
                 
-                <a href="#" className="bg-black text-white font-bold 
-                 px-6 py-3 rounded-xl hover:bg-gray-200 hover:text-black transition hover:scale-105 duration-500">
+                <a href="#" className={`bg-black text-white font-bold ${roboto.className}
+                 px-6 py-3 rounded-xl hover:bg-gray-200 hover:text-black transition hover:scale-105 duration-500`}>
                    Consultar Servicios
                 </a>
             </div>
@@ -85,8 +85,8 @@ export default function services(){
                 text-center lg:text-left">¿QUIERES CONTACTAR CON NOSOTROS?</h1>
                 
                 <div className="flex lg:flex-row flex-col gap-10 mt-5 items-center px-5 lg:items-start">
-                    <a href="" className="bg-black text-white font-bold 
-                    px-6 py-3 rounded-xl hover:bg-gray-200 hover:text-black transition-transform hover:scale-105 duration-500">
+                    <a href="" className={`bg-black text-white font-bold ${roboto.className}
+                    px-6 py-3 rounded-xl hover:bg-gray-200 hover:text-black transition-transform hover:scale-105 duration-500`}>
                         Agenda con nosotros
                     </a>
 

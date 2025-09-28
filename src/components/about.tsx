@@ -1,6 +1,6 @@
 import Image from "next/image";
 import VideoSection from "@/components/ui/video";
-
+import {roboto} from "@/components/ui/fonts"
 export default function About() {
   return (
     <>
@@ -35,8 +35,9 @@ export default function About() {
                 <h2 className="text-2xl md:text-3xl font-bold mb-5">
                     QUIENES SOMOS
                 </h2>
-                <a href="#" className="bg-black text-white font-bold px-6 py-3 rounded-xl hover:bg-gray-200 
-                hover:text-black transition-transform hover:scale-110 duration-500 mt-4 lg:mt-0">
+                <a href="#" className={`px-6 py-2 rounded-xl
+                 text-white font-bold hover:bg-gray-200 bg-black
+                hover:text-black hover:scale-105 duration-500 ml-5 ${roboto.className}`}>
                     Consultar Servicios
                 </a>
             </div>
@@ -45,7 +46,7 @@ export default function About() {
               <p className="text-xl md:text-2xl lg:text-[2.2rem] text-left">
                 Fundado por el arquitecto Leo y el ingeniero Luis, nuestro estudio está especializado en servicios profesionales de diseño y construcción de proyectos arquitectónicos, donde podrás encontrar la solución confiable que se ajuste a tu requerimiento.
               </p>
-              <VideoSection />
+              <VideoSection src="/assets/video.mp4" className="rounded-2xl" />
             </div>
           </div>
       </section>

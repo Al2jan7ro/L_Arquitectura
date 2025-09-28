@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/ui/header";
 import Footer from "@/components/ui/footer";
+import { baskervville} from "@/components/ui/fonts";
 
 import "./globals.css";
 
@@ -17,8 +18,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="min-h-screen flex flex-col w-full">
-        <Header />
+        <body className={`min-h-screen flex flex-col w-full ${baskervville .className}`}>
+          <Header />
         <main className="flex-1 flex flex-col items-center">
           {children}
         </main>

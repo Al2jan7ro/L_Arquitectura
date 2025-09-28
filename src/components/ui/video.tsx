@@ -1,7 +1,12 @@
 "use client";
 import React, { useRef, useEffect } from 'react';
 
-const VideoSection = () => {
+interface VideoSectionProps {
+  src: string;
+  className?: string;
+}
+
+const VideoSection: React.FC<VideoSectionProps> = ({ src, className }) => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
@@ -35,25 +40,18 @@ const VideoSection = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center py-10">
-      <div className="w-full max-w-6xl mx-auto">
         <video
           ref={videoRef}
-          className="w-full md:h-[90vh] max-h-screen rounded-xl object-cover bg-black"
+          className={className}
           loop
           muted
           autoPlay
-          controls
-          preload="auto"
           playsInline
-          poster="/assets/video-poster.jpg"
+         
         >
-          <source src="/assets/video.mp4" type="video/mp4" />
-          <source src="/assets/video2.webm" type="video/webm" />
+          <source src={src} type="video/mp4" />
           Tu navegador no soporta el elemento de video.
         </video>
-      </div>
-    </div>
   );
 };
 

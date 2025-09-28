@@ -2,7 +2,7 @@ import Hero from "@/components/hero";
 import Services from "@/components/services";
 import  About from "@/components/about";
 import ContactForm from "@/components/ui/contactForm";
-import ParallaxContainer from "@/components/ParallaxContainer";
+import ParallaxContainer from "@/components/ui/ParallaxContainer";
 
 export default function Home() {
   return (

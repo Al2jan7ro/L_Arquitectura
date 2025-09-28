@@ -1,4 +1,5 @@
 "use client";
+import {roboto} from "@/components/ui/fonts"
 
 import { useState, useRef, type FormEvent } from 'react';
 
@@ -111,7 +112,9 @@ export default function ContactForm() {
           {/* Botón */}
           <div className="md:col-span-2 flex justify-center">
             <button id="contact-btn" type="submit"
-              className="w-full md:w-auto bg-black text-white font-bold py-2 px-8 rounded-lg hover:bg-gray-500 focus:outline-none focus:ring-2 hover:border-black focus:ring-black focus:ring-offset-2 transition-colors">
+              className={`w-full md:w-auto bg-black text-white font-bold py-2 px-8 rounded-lg cursor-pointer
+               hover:bg-gray-500 focus:outline-none focus:ring-2 hover:border-black focus:ring-black
+                focus:ring-offset-2 transition-transform hover:scale-110 duration-500 ${roboto.className}`}>
               Enviar mensaje
             </button>
           </div>
