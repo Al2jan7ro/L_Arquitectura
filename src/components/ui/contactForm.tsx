@@ -54,10 +54,9 @@ export default function ContactForm() {
   return (
 <>
     <div className='flex flex-col items-center justify-center px-5'>
-        <h1 className='text-[2.2rem] lg:text-[4rem] text-center items-center justify-center
-        flex font-bold '>Contacta con nosotros</h1>
+        <h1 className='text-[2.2rem] lg:text-[3rem] text-center items-center justify-center
+        flex font-bold text-balance'>DÉJANOS SABER <br></br>CÓMO PODEMOS AYUDARTE</h1>
 
-        <p className='text-[1rem] text-center'>Lunes a Viernes: 8:00-18:00 - Sábado: 9:00-18:00 - Domingo: cerrado</p>
     </div>
     
 

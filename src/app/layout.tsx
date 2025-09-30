@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-        <body className={`min-h-screen flex flex-col w-full ${baskervville .className}`}>
+        <body className={`min-h-screen flex flex-col w-full ${baskervville .className} antialiased`}>
           <Header />
         <main className="flex-1 flex flex-col items-center">
           {children}
