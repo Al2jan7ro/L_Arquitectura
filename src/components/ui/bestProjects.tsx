@@ -50,7 +50,7 @@ export default function FeaturedProjects() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="group border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 bg-transparent"
+                  className="group border-foreground cursor-pointer text-foreground hover:bg-foreground hover:text-background transition-all duration-300 bg-transparent"
                 >
                   Ver proyecto completo
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

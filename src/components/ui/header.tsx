@@ -2,11 +2,25 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 import { roboto } from "../ui/fonts";
+import { Button } from "@/components/ui/button";
+import { X, Menu } from "lucide-react";
 
-export default function header() {
+export default function Header() {
   const [open, setOpen] = useState(false);
 
+  // 🎨 Detecta cuando el logo está sobre fondo blanco
   useEffect(() => {
     const logo = document.getElementById("logo-text");
     if (!logo) return;
@@ -16,7 +30,9 @@ export default function header() {
     const checkOverlap = () => {
       if (!logo) return;
       const logoRect = logo.getBoundingClientRect();
-      const whiteSections = Array.from(document.querySelectorAll(".white-section"));
+      const whiteSections = Array.from(
+        document.querySelectorAll(".white-section")
+      );
       let overWhite = false;
 
       for (const sec of whiteSections) {
@@ -29,27 +45,16 @@ export default function header() {
         );
 
         if (intersects) {
-          // comprobar que la sección tenga fondo blanco (bg-white => rgb(255, 255, 255))
           const bg = window.getComputedStyle(sec).backgroundColor;
-          if (
-            bg === "rgb(255, 255, 255)" ||
-            bg === "rgba(255, 255, 255, 1)" ||
-            bg === "#ffffff" ||
-            bg === "#fff"
-          ) {
+          if (bg.includes("255")) {
             overWhite = true;
             break;
           }
         }
       }
 
-      if (overWhite) {
-        logo.classList.add("text-black");
-        logo.classList.remove("text-white");
-      } else {
-        logo.classList.add("text-white");
-        logo.classList.remove("text-black");
-      }
+      logo.classList.toggle("text-black", overWhite);
+      logo.classList.toggle("text-white", !overWhite);
     };
 
     const onScrollOrResize = () => {
@@ -62,14 +67,16 @@ export default function header() {
       }
     };
 
-    // Chequeo inicial y listeners
     checkOverlap();
     window.addEventListener("scroll", onScrollOrResize, { passive: true });
     window.addEventListener("resize", onScrollOrResize);
 
-    // Si el DOM cambia (images cargan, contenido dinámico), re-evaluar
     const mo = new MutationObserver(() => onScrollOrResize());
-    mo.observe(document.body, { childList: true, subtree: true, attributes: true });
+    mo.observe(document.body, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+    });
 
     return () => {
       window.removeEventListener("scroll", onScrollOrResize);
@@ -79,96 +86,142 @@ export default function header() {
   }, []);
 
   return (
-    <header className="header absolute w-full z-40 flex flex-row px-8 py-6 justify-between text-white items-center">
-      <div>
-        {/* Logo: por defecto blanco. El script modifica SOLO este elemento */}
-        <Link
-          id="logo-text"
-          href="/"
-          className="font-bold text-2xl lg:text-3xl text-white transition-colors duration-300"
-        >
-          LArquitectura
-        </Link>
-      </div>
-
-      {/* Desktop menu (sin cambios en estilos) */}
-      <div className="menu hidden lg:flex flex-row">
-        <nav>
-          <ul className={`flex flex-row gap-5 ${roboto.className}`}>
-            <li>
-              <Link
-                href="/projects"
-                className="inline-block bg-[#282627] text-[.8rem] font-bold
-                         rounded-2xl px-4 py-2 transition duration-200 hover:bg-white 
-                          hover:text-black hover:scale-105"
-              >
-                PROYECTOS
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/services"
-                className="inline-block bg-[#282627] text-[.8em] font-bold
-                         rounded-2xl px-4 py-2 transition duration-200 hover:bg-white
-                          hover:text-black hover:scale-105"
-              >
-                SERVICIOS
-              </Link>
-            </li>
-
-            <li>
-              <Link
-                href="/contact"
-                className="inline-block bg-[#282627] text-[.8rem] font-bold
-                         rounded-2xl px-4 py-2 transition duration-200 hover:bg-white
-                          hover:text-black hover:scale-105"
-              >
-                CONTACTO
-              </Link>
-            </li>
-          </ul>
-        </nav>
-      </div>
-
-      {/* Mobile hamburger (sin cambios) */}
-      <button
-        aria-label="Abrir menú"
-        aria-expanded={open}
-        onClick={() => setOpen(true)}
-        className="lg:hidden bg-[#282627] rounded-2xl px-3 py-2 text-sm font-bold hover:bg-white hover:text-black transition"
+    <header className="absolute top-0 w-full z-40 flex justify-between items-center lg:px-20 px-5 py-6">
+      {/* Logo */}
+      <Link
+        id="logo-text"
+        href="/"
+        className="font-bold text-2xl lg:text-3xl text-white transition-colors duration-300"
       >
-        ☰
-      </button>
+        LArquitectura
+      </Link>
+
+      {/* Desktop Navigation */}
+      <div className="hidden lg:flex items-center">
+        <NavigationMenu>
+          <NavigationMenuList className={`flex gap-6 ${roboto.className}`}>
+            {/* PROYECTOS */}
+            <NavigationMenuItem>
+              <HoverCard openDelay={100}>
+                <HoverCardTrigger asChild>
+                  <NavigationMenuTrigger
+                    className="bg-[#282627] text-white text-[.8rem] font-bold 
+                               rounded-2xl px-4 py-2 transition duration-200 
+                               hover:bg-white hover:text-black hover:scale-105"
+                  >
+                    PROYECTOS
+                  </NavigationMenuTrigger>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-60 text-md">
+                  <p className="text-muted-foreground">
+                    Descubre nuestros proyectos arquitectónicos destacados, con
+                    un enfoque moderno y sostenible.
+                  </p>
+                  <Button
+                    asChild
+                    variant="link"
+                    className="mt-2 p-0 text-md text-[#282627]"
+                  >
+                    <Link href="/projects">Ver proyectos</Link>
+                  </Button>
+                </HoverCardContent>
+              </HoverCard>
+            </NavigationMenuItem>
+
+            {/* SERVICIOS */}
+            <NavigationMenuItem>
+              <HoverCard openDelay={100}>
+                <HoverCardTrigger asChild>
+                  <NavigationMenuTrigger
+                    className="bg-[#282627] text-white text-[.8rem] font-bold 
+                               rounded-2xl px-4 py-2 transition duration-200 
+                               hover:bg-white hover:text-black hover:scale-105"
+                  >
+                    SERVICIOS
+                  </NavigationMenuTrigger>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-60 text-md">
+                  <p className="text-muted-foreground">
+                    Conoce nuestros servicios de diseño, planificación y
+                    ejecución adaptados a cada cliente.
+                  </p>
+                  <Button
+                    asChild
+                    variant="link"
+                    className="mt-2 p-0 text-sm text-[#282627]"
+                  >
+                    <Link href="/services">Explorar servicios</Link>
+                  </Button>
+                </HoverCardContent>
+              </HoverCard>
+            </NavigationMenuItem>
+
+            {/* CONTACTO */}
+            <NavigationMenuItem>
+              <HoverCard openDelay={100}>
+                <HoverCardTrigger asChild>
+                  <NavigationMenuTrigger
+                    className="bg-[#282627] text-white text-[.8rem] font-bold 
+                               rounded-2xl px-4 py-2 transition duration-200 
+                               hover:bg-white hover:text-black hover:scale-105"
+                  >
+                    CONTACTO
+                  </NavigationMenuTrigger>
+                </HoverCardTrigger>
+                <HoverCardContent className="w-60 text-md">
+                  <p className="text-muted-foreground">
+                    Ponte en contacto con nosotros para iniciar tu proyecto o
+                    solicitar una cotización.
+                  </p>
+                  <Button
+                    asChild
+                    variant="link"
+                    className="mt-2 p-0 text-sm text-[#282627]"
+                  >
+                    <Link href="/contact">Contáctanos</Link>
+                  </Button>
+                </HoverCardContent>
+              </HoverCard>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
+      </div>
+
+      {/* Mobile Button */}
+      <Button
+        onClick={() => setOpen(true)}
+        variant="outline"
+        size="sm"
+        className="lg:hidden bg-white hover:bg-white text-black hover:text-black border-none rounded-2xl"
+      >
+        <Menu size={20} />
+      </Button>
 
       {/* Backdrop */}
       {open && (
         <button
-          aria-label="Cerrar menú"
           onClick={() => setOpen(false)}
-          className="fixed inset-0 bg-black/40 backdrop-blur-[1px] lg:hidden z-40"
+          className="fixed inset-0 bg-black/40 backdrop-blur-[1px] z-40"
         />
       )}
 
-      {/* Drawer */}
+      {/* Drawer Mobile */}
       <aside
-        className={`fixed top-0 right-0 h-screen w-full bg-[#282627] text-white lg:hidden z-50 transform transition-transform duration-300 ease-out ${
+        className={`fixed top-0 right-0 h-screen w-full bg-white text-black lg:hidden z-50 transform transition-transform duration-300 ease-out ${
           open ? "translate-x-0" : "translate-x-full"
         }`}
-        role="dialog"
-        aria-modal="true"
       >
-        <div className="flex items-center justify-between px-5 py-4 ">
+        <div className="flex items-center justify-between px-5 py-4">
           <button
             aria-label="Cerrar menú"
             onClick={() => setOpen(false)}
             className="bg-white text-black rounded-xl px-3 py-1 text-sm hover:opacity-90 transition"
           >
-            X
+            <X size={18} />
           </button>
         </div>
         <nav className="h-[calc(100vh-56px)] flex items-center justify-center">
-          <ul className="flex flex-col items-center gap-6 text-[2rem]">
+          <ul className="flex flex-col items-center gap-6 text-[2rem] font-semibold">
             <li>
               <Link href="/projects" onClick={() => setOpen(false)}>
                 PROYECTOS

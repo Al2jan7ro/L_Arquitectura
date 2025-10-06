@@ -21,16 +21,6 @@ const featuredProjects = [
     location: "Venezuela, Barquisimeto",  
     area: "6.680 m²",
   },
-  {
-    id: "3",
-    url: "La 42",
-    title: "Torre Meridian",
-    description:
-      "Un rascacielos que redefine el skyline urbano con su diseño vertical innovador. La fachada dinámica responde al clima y la luz, mientras que los espacios interiores priorizan el bienestar y la sostenibilidad, estableciendo nuevos estándares para la arquitectura corporativa.",
-    image: "./projects/furiafit/furiafit.jpg",
-    year: "2024",
-    location: "Valencia, España",
-    area: "18,500 m²",
-  },
+  
 ]
 export default featuredProjects

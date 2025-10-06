@@ -34,7 +34,6 @@ export default function ContactPage() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white pointer-events-none"></div>
                         <div className="absolute inset-0 flex items-center justify-center p-10 z-10">
-                            {/* Aquí puedes agregar contenido sobre la imagen */}
                         </div>
                     </div>
                 </div>

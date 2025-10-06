@@ -54,9 +54,9 @@ const projectsData: Record<string, any> = {
     category: "Comercial, Depósito y Residencial",
     heroVideo: "/projects/banyan/banyanhero.mp4",
     images: [
-      "/modern-glass-office.png",
-      "/luxury-modern-villa-with-pool-and-landscape.jpg",
-      "/modern-minimalist-residential-architecture-with-na.jpg",
+      "/projects/banyan/banyanimg1.png",
+      "/projects/banyan/banyanimg2.jpg",
+      "/projects/banyan/banyanimg3.png",
     ],
     concept: {
       title: "Edificación de Usos Mixtos",
@@ -89,50 +89,7 @@ const projectsData: Record<string, any> = {
     },
   },
 
-  "La 42": {
-    title: "Torre Meridian",
-    subtitle: "Arquitectura Corporativa Sostenible",
-    year: "2024",
-    location: "Valencia, España",
-    area: "18,500 m²",
-    category: "Corporativo",
-    heroImage: "/modern-sustainable-skyscraper-with-dynamic-facade.jpg",
-    images: [
-      "/modern-glass-office.png",
-      "/luxury-modern-villa-with-pool-and-landscape.jpg",
-      "/contemporary-cultural-center-with-bold-geometric-a.jpg",
-    ],
-    concept: {
-      title: "Verticalidad Inteligente",
-      description:
-        "Un rascacielos que redefine el concepto de edificio corporativo mediante una fachada dinámica que responde al clima. La arquitectura se convierte en un sistema vivo que optimiza recursos y mejora el bienestar de sus ocupantes.",
-      results:
-        "Certificación LEED Platinum y reconocimiento como el edificio más sostenible de la región mediterránea.",
-    },
-    challenge: {
-      title: "El Reto",
-      description:
-        "Diseñar un edificio de gran altura que minimice su huella de carbono mientras maximiza la eficiencia operativa y el confort de los usuarios en un clima mediterráneo con altas temperaturas estivales.",
-    },
-    impact: {
-      title: "Innovar",
-      description:
-        "La fachada inteligente reduce la ganancia térmica en un 45%, mientras que los sistemas de ventilación natural disminuyen el uso de aire acondicionado. Los espacios de trabajo priorizan la luz natural y las vistas panorámicas.",
-      stats: [
-        { value: "45%", label: "Reducción térmica" },
-        { value: "LEED", label: "Certificación Platinum" },
-        { value: "100%", label: "Energía renovable" },
-      ],
-    },
-    client: {
-      name: "Meridian Group",
-      description: "Corporación líder en desarrollo inmobiliario sostenible y espacios de trabajo innovadores.",
-      website: "https://meridiangroup.com",
-      instagram: "https://instagram.com/meridiangroup",
-      facebook: "https://facebook.com/meridiangroup",
-      image: "/modern-sustainable-skyscraper-with-dynamic-facade.jpg",
-    },
-  },
+ 
 };
 
 export default projectsData;

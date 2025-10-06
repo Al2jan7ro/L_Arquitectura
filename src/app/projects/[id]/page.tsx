@@ -3,8 +3,9 @@ import { ArrowLeft, Instagram, Facebook, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import projectsData from "@/data/projectsData"
 
-export default  function ProjectPage({ params }: { params: { id: string } }) {
-  const projectId = decodeURIComponent(params.id);
+export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params; // 👈 Esperamos la promesa
+  const projectId = decodeURIComponent(id);
   const project = projectsData[projectId];
 
   if (!project) {

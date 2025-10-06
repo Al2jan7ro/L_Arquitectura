@@ -27,7 +27,7 @@ export default function Services() {
 
       <div className="w-full h-screen">
 
-        <VideoSection src="/assets/servicesVideo.mp4" className="w-[90%] mx-auto rounded-2xl h-full object-cover" />
+        <VideoSection src="/assets/servicesVideo.mp4" className="w-[90%] mx-auto h-full object-cover" />
 
       </div>
 
@@ -168,7 +168,7 @@ export default function Services() {
 
 
       <section className="w-[90%] mx-auto grid lg:grid-cols-2 gap-10 items-center
-         bg-yellow-50 p-10 rounded-2xl relative my-20">
+         bg-yellow-50 p-10  relative my-20">
         {/* Columna de texto */}
         <div>
           <p className="text-black text-xl md:text-2xl lg:text-[1.6rem] font-500 text-left">
@@ -187,13 +187,13 @@ export default function Services() {
             src="/images/bimservices.jpg"
             alt="Imagen de arquitectura para mostrar los servicios de la empresa LArquitectura"
             fill
-            className="object-cover"
+            className="object-center"
             priority
           />
         </div>
 
         <a href="/contact" className={`lg:absolute text-center bottom-10 left-10 px-6 py-3 rounded-xl
-             hover:bg-gray-200 hover:text-black
+             hover:bg-gray-200 hover:text-black mt-2
                  text-white font-bold bg-black transition-transform 
                  hover:scale-105 duration-300 ${roboto.className}`}>
           Contáctanos

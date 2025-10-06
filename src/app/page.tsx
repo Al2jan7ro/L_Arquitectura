@@ -1,7 +1,7 @@
 import Hero from "@/components/hero";
 import Services from "@/components/services";
 import  About from "@/components/about";
-import ContactForm from "@/components/ui/contactForm";
+import Partners from "@/components/partners";
 import ParallaxContainer from "@/components/ui/ParallaxContainer";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <Services />
       </ParallaxContainer>
       <About />
-      <ContactForm />
+      <Partners />
     </>
   );
 }

@@ -77,7 +77,7 @@ export default function ContactForm() {
           <div>
             <label htmlFor="name" className="block text-gray-700 text-sm font-semibold mb-2">Nombre</label>
             <input type="text" id="name" name="name"
-              className="w-full px-6 py-4 border border-gray-300 bg-black/20 rounded-lg focus:outline-none hover:border-black focus:border-black focus:ring-2 focus:ring-black"
+              className="w-full px-6 py-4 border border-gray-300 bg-black/20  focus:outline-none hover:border-black focus:border-black focus:ring-2 focus:ring-black"
               placeholder="Tu nombre completo" required />
           </div>
 
@@ -85,7 +85,7 @@ export default function ContactForm() {
           <div>
             <label htmlFor="email" className="block text-gray-700 text-sm font-semibold mb-2">Email</label>
             <input type="email" id="email" name="email"
-              className="w-full px-6 py-4 border border-gray-300 bg-black/20 rounded-lg focus:outline-none hover:border-black focus:border-black focus:ring-2 focus:ring-black"
+              className="w-full px-6 py-4 border border-gray-300 bg-black/20  focus:outline-none hover:border-black focus:border-black focus:ring-2 focus:ring-black"
               placeholder="tu.email@ejemplo.com" required />
           </div>
 
@@ -93,7 +93,7 @@ export default function ContactForm() {
           <div className="md:col-span-2">
             <label htmlFor="subject" className="block text-gray-700 text-sm font-semibold mb-2">Asunto</label>
             <input type="text" id="subject" name="subject"
-              className="w-full px-6 py-4 border border-gray-300 bg-black/20 rounded-lg focus:outline-none hover:border-black focus:border-black focus:ring-2 focus:ring-black"
+              className="w-full px-6 py-4 border border-gray-300 bg-black/20  focus:outline-none hover:border-black focus:border-black focus:ring-2 focus:ring-black"
               placeholder="Escribe el asunto" required />
           </div>
 
@@ -101,7 +101,7 @@ export default function ContactForm() {
           <div className="md:col-span-2">
             <label htmlFor="description" className="block text-gray-700 text-sm font-semibold mb-2">Descripción</label>
             <textarea id="description" name="description" rows={4}
-              className="w-full px-4 py-2 border border-gray-300 bg-black/20 rounded-lg resize-none focus:outline-none hover:border-black focus:border-black focus:ring-2 focus:ring-black"
+              className="w-full px-4 py-2 border border-gray-300 bg-black/20 resize-none focus:outline-none hover:border-black focus:border-black focus:ring-2 focus:ring-black"
               placeholder="Cuéntame en qué puedo ayudarte." required></textarea>
           </div>
 
