@@ -1,19 +1,50 @@
-import SocialLinks from '@/components/ui/SocialLinks';
 import ContactForm from '@/components/ui/contactForm';
 import { BusinessHours } from "@/components/ui/horarios"
+import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react"
+import { Card } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
 import Image from 'next/image';
 
+const team = [
+    {
+        name: "Ing. Leonardo Pérez",
+        role: "Arquitecto Principal",
+        email: "leo.perez@email.com",
+        phone: "+58 414 1234567",
+        image: "/professionals/architect-1.png",
+    },
+    {
+        name: "Ing. Luis Rodríguez",
+        role: "Ingeniero Civil",
+        email: "luis.rodriguez@email.com",
+        phone: "+58 424 1234567",
+        image: "/professional-engineer-portrait.png",
+    },
+    {
+        name: "Arq. María González",
+        role: "Diseñadora de Interiores",
+        email: "maria.gonzalez@email.com",
+        phone: "+58 412 7654321",
+        image: "/professional-interior-designer-portrait.jpg",
+    },
+]
+
+const socialLinks = [
+    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
+    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+]
 export default function ContactPage() {
     return (
         <>
             <section className="w-full flex flex-col bg-white white-section ">
                 {/* Texto arriba */}
                 <div className="flex flex-col items-start justify-center px-5 lg:px-15 mt-40 lg:mt-60">
-                    <h1 className="text-[3.2rem] lg:text-[7rem] text-center lg:text-left
+                    <h1 className="text-[3.2rem] lg:text-[6rem] text-center lg:text-left 
                      lg:leading-30 font-bold mb-6">
                         CONSULTA Y AGENDA TU CITA
                     </h1>
-                    <p className="text-xl lg:text-[2.5rem] font-bold mb-8">
+                    <p className="text-xl lg:text-[2rem] font-bold mb-8 text-muted-foreground">
                         Comience hoy mismo el desarrollo de su proyecto arquitectónico
                         o civil. En L Arquitectura estamos listos para escuchar sus
                         requerimientos y convertir sus ideas en planos ejecutables.
@@ -39,43 +70,104 @@ export default function ContactPage() {
                 </div>
 
                 {/* Información de contacto y redes */}
-                <div className="w-full px-5 lg:px-15 mt-50">
-                    <div className="border-t-2 border-b-2 border-black py-8 px-5 flex justify-center">
 
-                        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 items-start w-full max-w-7xl lg:px-8 mb-8">
-                            <div className="flex flex-col items-start">
-                                <h2 className="font-bold text-3xl mb-4 uppercase">¿DÓNDE ESTAMOS?</h2>
-                                <p className="text-2xl font-['Roboto']">Nuestra oficina principal está ubicada en:</p>
-                                <p className="text-2xl font-semibold mt-2 font-['Roboto']">Barquisimeto, Venezuela</p>
-                                <p className="text-lg text-gray-600 mt-1 font-['Roboto']">¡Visítanos para una atención personalizada!</p>
+                <section className="w-full lg:px-15 px-5 py-20 md:py-32">
+                    <div className="container mx-auto">
+                        {/* Header */}
+                        <div className="mb-20">
+                            <div className="flex items-center gap-4 mb-8">
+                                <div className="h-px w-16 bg-border" />
+                                <span className="text-[2rem] font-light tracking-widest
+                                 text-muted-foreground uppercase">Contacta con nosotros</span>
                             </div>
-                            <div className="flex flex-col items-start">
-                                <h2 className="font-bold text-3xl mb-4 uppercase">SÍGUENOS EN REDES SOCIALES</h2>
-                                <p className="text-2xl mb-4 font-['Roboto']">Mantente conectado y conoce más sobre nuestros proyectos:</p>
-                                <SocialLinks />
-                            </div>
-                            <div className="flex flex-col items-start">
-                                <h2 className="font-bold text-3xl mb-4 uppercase">CONTACTO DIRECTO</h2>
-                                <p className="text-2xl font-semibold font-['Roboto']">Ing. Leonardo Pérez</p>
-                                <p className="text-xl font-['Roboto']">Correo: <a href="mailto:leo.perez@email.com" 
-                                className="text-black underline font-['Roboto']">leo.perez@email.com</a></p>
-                                <p className="text-xl mb-4 font-['Roboto']">Teléfono: <a href="tel:+584141234567" 
-                                className="text-black underline font-['Roboto']">+58 414 1234567</a></p>
+                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-balance">
+                                Hablemos de tu proyecto
+                            </h2>
+                        </div>
 
-                                <p className="text-2xl font-semibold font-['Roboto']">Ing. Luis Rodríguez</p>
-                                <p className="text-xl font-['Roboto']">Correo: <a href="mailto:luis.rodriguez@email.com" 
-                                className="text-black underline">luis.rodriguez@email.com</a></p>
-                                <p className="text-xl font-['Roboto']">Teléfono: <a href="tel:+584241234567" 
-                                className="text-black underline font-['Roboto']">+58 424 1234567</a></p>
-                            </div>
+                        {/* Team Members */}
+                        <div className="grid md:grid-cols-3 gap-12 mb-32">
+                            {team.map((member, index) => (
+                                <div key={index} className="group">
+                                    <div className="relative w-48 h-48 mx-auto mb-6 overflow-hidden rounded-full">
+                                        <Image
+                                            src={member.image || "/placeholder.svg"}
+                                            alt={member.name}
+                                            fill
+                                            className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                        />
+                                    </div>
+                                    <div className="text-center">
+                                        <h3 className="text-2xl font-light mb-2">{member.name}</h3>
+                                        <p className="text-sm font-light tracking-widest text-muted-foreground uppercase mb-6">{member.role}</p>
+                                        <div className="space-y-3">
+                                            <a
+                                                href={`mailto:${member.email}`}
+                                                className="flex items-center justify-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                                            >
+                                                <Mail className="w-4 h-4" strokeWidth={1.5} />
+                                                <span className="text-sm font-light">{member.email}</span>
+                                            </a>
+                                            <a
+                                                href={`tel:${member.phone.replace(/\s/g, "")}`}
+                                                className="flex items-center justify-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
+                                            >
+                                                <Phone className="w-4 h-4" strokeWidth={1.5} />
+                                                <span className="text-sm font-light">{member.phone}</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Location & Social */}
+                        <div className="grid md:grid-cols-2 gap-12 lg:gap-15 mb-20">
+                            <Card className="p-10 border-border bg-transparent">
+                                <MapPin className="w-10 h-10 mb-6 text-foreground" strokeWidth={1} />
+                                <h3 className="text-2xl font-light mb-4">¿Dónde estamos?</h3>
+                                <p className="text-lg text-muted-foreground font-light leading-relaxed mb-2">
+                                    Nuestra oficina principal está ubicada en:
+                                </p>
+                                <p className="text-xl font-light mb-1">Barquisimeto, Venezuela</p>
+                                <p className="text-muted-foreground font-light">¡Visítanos para una atención personalizada!</p>
+                            </Card>
+
+                            <Card className="p-10 border-border bg-transparent">
+                                <div className="flex items-center gap-3 mb-6">
+                                    {socialLinks.map((social, index) => (
+                                        <social.icon key={index} className="w-10 h-10 text-foreground" strokeWidth={1} />
+                                    ))}
+                                </div>
+                                <h3 className="text-2xl font-light mb-4">Síguenos en redes sociales</h3>
+                                <p className="text-lg text-muted-foreground font-light leading-relaxed mb-6">
+                                    Mantente conectado y conoce más sobre nuestros proyectos
+                                </p>
+                                <div className="flex gap-4">
+                                    {socialLinks.map((social, index) => (
+                                        <Button
+                                            key={index}
+                                            variant="outline"
+                                            size="icon"
+                                            className="border-foreground hover:bg-foreground hover:text-background transition-all duration-300 bg-transparent"
+                                            asChild
+                                        >
+                                            <a href={social.href} target="_blank" rel="noopener noreferrer" aria-label={social.label}>
+                                                <social.icon className="w-5 h-5" strokeWidth={1.5} />
+                                            </a>
+                                        </Button>
+                                    ))}
+                                </div>
+                            </Card>
                         </div>
                     </div>
-                </div>
+                </section>
+
                 {/* Horario de atención */}
                 <BusinessHours />
                 {/* Formulkario de contacto */}
                 <ContactForm />
-                
+
             </section>
         </>
     );

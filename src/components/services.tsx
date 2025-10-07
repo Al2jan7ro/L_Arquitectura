@@ -49,7 +49,7 @@ export default function services() {
                 {/* Servicios + Imagen lado a lado en desktop */}
                 <div className="mt-10 grid lg:grid-cols-2 gap-10 px-5 lg:px-20 items-stretch">
                     {/* Columna servicios */}
-                    <div className="flex flex-col gap-10 justify-between">
+                    <div className="flex flex-col gap-10 justify-between animate-slide-in-bottom">
                         <div className="service flex flex-col ">
                             <h1 className="text-xl font-bold border-black border-t pt-2">Diseñamos soluciones arquitectónicas</h1>
                             <p className="text-md text-muted-foreground font-light ">

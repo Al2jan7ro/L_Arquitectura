@@ -9,7 +9,9 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "LArquitectura Website",
   description: 'Sitio web de la empresa LArquitectura en barquisimeto venezuela',
-  
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function RootLayout({

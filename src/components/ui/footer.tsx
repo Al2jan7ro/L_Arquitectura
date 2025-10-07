@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Facebook, Instagram, Mail, MessageCircle } from "lucide-react"
-
+import { Facebook, Instagram, Mail, } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa";
 export default function Footer() {
   return (
     <footer className="bg-black text-white w-full py-10 px-6 lg:px-20">
@@ -51,33 +51,33 @@ export default function Footer() {
           <div className="lg:col-span-3 flex flex-col justify-center lg:items-end">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">Síguenos</h3>
             <div className="flex gap-3">
+
               <a
-                href="#"
-                className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all duration-300 hover:scale-110"
-                aria-label="Facebook"
-              >
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
+                href="https://www.instagram.com/leo.luis.arquitectura/?hl=es-la"
                 className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all duration-300 hover:scale-110"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Instagram className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=leo.henry.asociados@gmail.com&su=Consulta%20de%20Proyecto:%20¡Transformemos%20tu%20visión%20con%20LArquitectura!&body=Hola%20equipo%20de%20LArquitectura,%0A%0AMe%20interesa%20conocer%20más%20sobre%20sus%20servicios%20para%20un%20proyecto%20que%20tengo%20en%20mente.%20¿Podrían%20proporcionarme%20más%20detalles%20o%20indicarme%20los%20próximos%20pasos?%0A%0AGracias."
                 className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all duration-300 hover:scale-110"
                 aria-label="Email"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Mail className="w-5 h-5" />
               </a>
               <a
-                href="#"
+                href="https://wa.me/584267779108?text=¡Hola!%20Me%20gustaría%20explorar%20cómo%20LArquitectura%20puede%20ayudarme%20con%20mi%20próximo%20proyecto.%20¿Podemos%20conversar?"
                 className="bg-white text-black p-3 rounded-full hover:bg-gray-200 transition-all duration-300 hover:scale-110"
                 aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <MessageCircle className="w-5 h-5" />
+                <FaWhatsapp className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -85,7 +85,7 @@ export default function Footer() {
 
         {/* Bottom section */}
         <div className="border-t border-white/10 pt-6">
-          <p className="text-md text-gray-300 font-bold">Desarrollado por Al2jan7ro. © 2025 Todos los derechos reservados.</p>
+          <p className="text-md text-gray-300 font-bold">Desarrollado por Al2jan7ro.  &copy;2025 Todos los derechos reservados.</p>
         </div>
       </div>
     </footer>

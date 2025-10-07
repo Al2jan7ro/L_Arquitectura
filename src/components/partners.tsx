@@ -40,7 +40,7 @@ export default function PartnersSection() {
 
                     {/* Botón */}
                     <a
-                        href="https://www.gavioty.com/"
+                        href="https://gpsprocr.com/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group w-fit inline-flex items-center justify-center gap-2 lg:absolute
@@ -87,7 +87,7 @@ export default function PartnersSection() {
 
                     {/* Botón */}
                     <a
-                        href="https://gpsprocr.com/"
+                        href=""
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group w-fit inline-flex items-center justify-center gap-2 lg:absolute
@@ -103,8 +103,8 @@ export default function PartnersSection() {
                 {/* Columna de imagen */}
                 <div className="relative w-full h-[300px] lg:h-[400px] flex items-center justify-center lg:order-1">
                     <Image
-                        src="/images/T-Gaviobox.png"
-                        alt="Logo de SAECA, aliado de laarquitectura"
+                        src="/images/logosaeca.jpg"
+                        alt="Logo de la empresa ingeniería SAECA, aliado de laarquitectura"
                         fill
                         className="object-contain"
                         priority

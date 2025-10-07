@@ -13,7 +13,7 @@ export default function Services() {
   return (
     <section className="white-section w-full flex flex-col items-center bg-white justify-center mb-50">
 
-      <div className="flex flex-col justify-center lg:justify-left w-full h-screen 
+      <div className="flex flex-col justify-center lg:justify-left w-full h-screen
                 px-5 lg:px-15 lg:mt-50">
         <h1 className="text-[3.2rem] lg:text-[7rem] font-bold 
                     lg:leading-30 lg:text-left text-center">NUESTRO SERVICIO</h1>
@@ -31,7 +31,7 @@ export default function Services() {
 
       </div>
 
-      <div className="w-full mt-50 px-5 lg:px-15">
+      <div className="w-full mt-50 px-5 lg:px-15 ">
         {/* ARQUITECTURA */}
         <h1 className="text-[2rem] lg:text-[5rem] font-bold mb-5">ARQUITECTURA</h1>
         <p className="text-lg lg:text-2xl mb-10">
