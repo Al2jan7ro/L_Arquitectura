@@ -54,8 +54,7 @@ export default function BentoGrid() {
                                         opacity: hoveredId === project.id ? 1 : 0,
                                         overflow: "hidden",
                                     }}
-                                >
-                                    Explora este proyecto y descubre cómo transformamos espacios en experiencias únicas.
+                                >{project.description}
                                 </p>
                             </div>
                         </div>

@@ -4,6 +4,14 @@ import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image';
+import { Metadata } from "next";
+import { generateSeoMetadata } from "@/data/SEO";
+import { CONTACT_SEO } from "@/data/seo-constants";
+
+
+export function generateMetadata(): Metadata {
+    return generateSeoMetadata(CONTACT_SEO);
+  }
 
 const team = [
     {
@@ -11,21 +19,21 @@ const team = [
         role: "Arquitecto Principal",
         email: "leo.perez@email.com",
         phone: "+58 414 1234567",
-        image: "/professionals/architect-1.png",
+        image: "/images/ingsaul.png",
     },
     {
-        name: "Ing. Luis Rodríguez",
+        name: "Ing. Luis Guillen",
         role: "Ingeniero Civil",
-        email: "luis.rodriguez@email.com",
-        phone: "+58 424 1234567",
-        image: "/professional-engineer-portrait.png",
+        email: "guillenphenry@gmail.com",
+        phone: "+58 424 5283033",
+        image: "/images/ingsaul.png",
     },
     {
-        name: "Arq. María González",
+        name: "Saul",
         role: "Diseñadora de Interiores",
         email: "maria.gonzalez@email.com",
         phone: "+58 412 7654321",
-        image: "/professional-interior-designer-portrait.jpg",
+        image: "/images/ingsaul.png",
     },
 ]
 
@@ -42,7 +50,7 @@ export default function ContactPage() {
                 <div className="flex flex-col items-start justify-center px-5 lg:px-15 mt-40 lg:mt-60">
                     <h1 className="text-[3.2rem] lg:text-[6rem] text-center lg:text-left 
                      lg:leading-30 font-bold mb-6">
-                        CONSULTA Y AGENDA TU CITA
+                        CONSULTA Y AGENDA
                     </h1>
                     <p className="text-xl lg:text-[2rem] font-bold mb-8 text-muted-foreground">
                         Comience hoy mismo el desarrollo de su proyecto arquitectónico
@@ -54,7 +62,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Imagen con gradiente abajo */}
-                <div className="relative w-full h-[300px] px-5 lg:px-8 mb-12 mt-4">
+                <div className="relative w-full h-[300px] px-5 lg:px-8 mb-12 mt-50">
                     <div className="w-full h-full rounded-2xl overflow-hidden relative">
                         <Image
                             src="/images/contactimg.jpg"
@@ -62,6 +70,7 @@ export default function ContactPage() {
                             fill
                             className="object-cover"
                             priority
+
                         />
                         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-white pointer-events-none"></div>
                         <div className="absolute inset-0 flex items-center justify-center p-10 z-10">
@@ -91,10 +100,11 @@ export default function ContactPage() {
                                 <div key={index} className="group">
                                     <div className="relative w-48 h-48 mx-auto mb-6 overflow-hidden rounded-full">
                                         <Image
-                                            src={member.image || "/placeholder.svg"}
+                                            src={member.image}
                                             alt={member.name}
                                             fill
                                             className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                            sizes="(max-width: 768px) 100vw, 50vw"
                                         />
                                     </div>
                                     <div className="text-center">

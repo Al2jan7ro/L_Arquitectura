@@ -103,6 +103,7 @@ export default function Header() {
             {/* PROYECTOS */}
             <NavigationMenuItem>
               <HoverCard openDelay={100}>
+            <Link href="/projects">
                 <HoverCardTrigger asChild>
                   <NavigationMenuTrigger
                     className="bg-[#282627] text-white text-[.8rem] font-bold 
@@ -112,6 +113,7 @@ export default function Header() {
                     PROYECTOS
                   </NavigationMenuTrigger>
                 </HoverCardTrigger>
+              </Link>
                 <HoverCardContent className="w-60 text-md">
                   <p className="text-muted-foreground">
                     Descubre nuestros proyectos arquitectónicos destacados, con
@@ -120,7 +122,7 @@ export default function Header() {
                   <Button
                     asChild
                     variant="link"
-                    className="mt-2 p-0 text-md text-[#282627]"
+                    className="mt-2 p-0 text-[1rem] text-black "
                   >
                     <Link href="/projects">Ver proyectos</Link>
                   </Button>
@@ -131,6 +133,8 @@ export default function Header() {
             {/* SERVICIOS */}
             <NavigationMenuItem>
               <HoverCard openDelay={100}>
+
+                <Link href="/services">
                 <HoverCardTrigger asChild>
                   <NavigationMenuTrigger
                     className="bg-[#282627] text-white text-[.8rem] font-bold 
@@ -140,6 +144,7 @@ export default function Header() {
                     SERVICIOS
                   </NavigationMenuTrigger>
                 </HoverCardTrigger>
+                </Link>
                 <HoverCardContent className="w-60 text-md">
                   <p className="text-muted-foreground">
                     Conoce nuestros servicios de diseño, planificación y
@@ -148,7 +153,7 @@ export default function Header() {
                   <Button
                     asChild
                     variant="link"
-                    className="mt-2 p-0 text-sm text-[#282627]"
+                    className="mt-2 p-0 text-[1rem] text-black "
                   >
                     <Link href="/services">Explorar servicios</Link>
                   </Button>
@@ -159,6 +164,8 @@ export default function Header() {
             {/* CONTACTO */}
             <NavigationMenuItem>
               <HoverCard openDelay={100}>
+
+                <Link href="/contact">
                 <HoverCardTrigger asChild>
                   <NavigationMenuTrigger
                     className="bg-[#282627] text-white text-[.8rem] font-bold 
@@ -168,6 +175,7 @@ export default function Header() {
                     CONTACTO
                   </NavigationMenuTrigger>
                 </HoverCardTrigger>
+                </Link>
                 <HoverCardContent className="w-60 text-md">
                   <p className="text-muted-foreground">
                     Ponte en contacto con nosotros para iniciar tu proyecto o
@@ -176,7 +184,7 @@ export default function Header() {
                   <Button
                     asChild
                     variant="link"
-                    className="mt-2 p-0 text-sm text-[#282627]"
+                    className="mt-2 p-0 text-[1rem] text-black "
                   >
                     <Link href="/contact">Contáctanos</Link>
                   </Button>

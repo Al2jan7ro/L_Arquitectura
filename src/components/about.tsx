@@ -56,7 +56,8 @@ export default function About() {
                 <Button
                   variant="outline"
                   size="lg"
-                  className="group border-foreground text-foreground hover:bg-foreground hover:text-background transition-all duration-300 bg-transparent"
+                  className="group border-foreground text-foreground text-lg cursor-pointer
+                  hover:bg-foreground hover:text-background transition-all duration-300 bg-transparent"
                 >
                   Explora nuestros proyectos
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -71,6 +72,7 @@ export default function About() {
                 fill
                 className="object-cover"
                 priority
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -100,7 +102,7 @@ export default function About() {
                   <h3 className="text-sm font-light tracking-widest text-muted-foreground uppercase mb-2">
                     Experiencia
                   </h3>
-                  <p className="text-2xl font-light">+15 años transformando espacios</p>
+                  <p className="text-2xl font-light">+20 años transformando espacios</p>
                 </div>
                 <div>
                   <h3 className="text-sm font-light tracking-widest text-muted-foreground uppercase mb-2">Proyectos</h3>

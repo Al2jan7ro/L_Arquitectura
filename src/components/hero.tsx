@@ -20,12 +20,7 @@ export default function hero() {
                  items-center justify-center h-full text-center">
                     <h1 className="text-[2.6rem] lg:text-[5rem] font-bold items-center
                      mt-30 px-5 lg:px-30">WE LOOK BEYOND THE ARCHITECTURE</h1>
-
-
                     <SocialLinks className="text-white" />
-
-
-
                     <div className="w-50 h-50 relative mt-4">
                         <Image
                             src="/images/logoB.png"
@@ -33,6 +28,7 @@ export default function hero() {
                             fill
                             className="object-contain"
                             priority
+                            sizes="(max-width: 768px) 100vw, 50vw"
                         />
                     </div>
                 </div>

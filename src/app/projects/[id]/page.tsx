@@ -1,11 +1,30 @@
 import Link from "next/link"
 import { ArrowLeft, Instagram, Facebook, Globe } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import projectsData from "@/data/projectsData"
+import projectsData from "@/data/projectsData";
+import { generateSeoMetadata } from "@/data/SEO";
+import { Metadata } from "next";
 
-export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
-  const { id } = await params; // 👈 Esperamos la promesa
-  const projectId = decodeURIComponent(id);
+export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+  const { id } = await params; const projectId = decodeURIComponent(id);
+  const project = projectsData[projectId];
+
+  // Si el proyecto no existe, generamos un título para la página de error.
+  if (!project) {
+    return generateSeoMetadata({ title: "Proyecto no encontrado" });
+  }
+
+  // Generamos los metadatos usando los datos específicos del proyecto.
+  return generateSeoMetadata({
+    title: `${project.title} - Proyectos`,
+    description: project.concept.description, // Usamos la descripción del concepto como meta descripción.
+    imageUrl: project.client.image, // Usamos la imagen del cliente para compartir en redes.
+    pathname: `/projects/${projectId}`,
+  });
+}
+
+export default async function ProjectPage({ params }: { params: { id: string } }) {
+  const { id } = await params; const projectId = decodeURIComponent(id);
   const project = projectsData[projectId];
 
   if (!project) {
@@ -20,9 +39,12 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
       </div>
     );
   }
-
+  
   return (
-    <main className="min-h-screen bg-background mt-20">
+  <div className="white-section bg-white">
+
+ 
+    <main className="min-h-screen   mt-20">
       {/* Navigation */}
       <nav className="container mx-auto px-6 py-8">
         <Link
@@ -64,24 +86,24 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
         </div>
 
         {/* Hero Image */}
-          <div className="relative aspect-[16/9] overflow-hidden bg-muted">
-            {(projectId === "FuriaFit" || projectId === "Banyan") ? (
-              <video
-                src={project.heroVideo}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="w-full h-full object-cover"
-              />
-            ) : (
-              <img
-                src={project.heroImage || "/placeholder.svg"}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
-            )}
-          </div>
+        <div className="relative aspect-[16/9] overflow-hidden bg-muted">
+          {(projectId === "FuriaFit" || projectId === "Banyan") ? (
+            <video
+              src={project.heroVideo}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <img
+              src={project.heroImage || "/placeholder.svg"}
+              alt={project.title}
+              className="w-full h-full object-cover"
+            />
+          )}
+        </div>
       </section>
 
       {/* Concept Section */}
@@ -245,5 +267,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
         </div>
       </section>
     </main>
+    </div>
+
   );
 }

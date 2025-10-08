@@ -1,4 +1,13 @@
 import Projects from "@/components/projects";
+import { Metadata } from "next";
+import { generateSeoMetadata } from "@/data/SEO";
+import { PROJECTS_SEO } from "@/data/seo-constants";
+
+
+export function generateMetadata(): Metadata {
+    return generateSeoMetadata(PROJECTS_SEO);
+  }
+
 export default function ProjectsPage(){
     return (
        <>
@@ -6,7 +15,7 @@ export default function ProjectsPage(){
             <main className="hero relative w-full h-screen text-white overflow-hidden">
                 <video
                     className="hero-video absolute inset-0 w-full h-full object-cover -z-20"
-                    src="/projects/furiafit/projectvideo.mp4"
+                    src="/assets/projectvideo.mp4"
                     autoPlay
                     muted
                     loop

@@ -1,6 +1,9 @@
 import Image from "next/image";
-import { roboto } from "@/components/ui/fonts"
+import { Metadata } from "next";
+import { generateSeoMetadata } from "@/data/SEO";
+import { SERVICES_SEO } from "@/data/seo-constants";
 import VideoSection from "@/components/ui/video";
+import { ArrowRight } from "lucide-react";
 
 import {
   Accordion,
@@ -9,15 +12,19 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
+export function generateMetadata(): Metadata {
+  return generateSeoMetadata(SERVICES_SEO);
+}
+
 export default function Services() {
   return (
     <section className="white-section w-full flex flex-col items-center bg-white justify-center mb-50">
 
       <div className="flex flex-col justify-center lg:justify-left w-full h-screen
-                px-5 lg:px-15 lg:mt-50">
-        <h1 className="text-[3.2rem] lg:text-[7rem] font-bold 
+                px-5 lg:px-15 lg:mt-20">
+        <h1 className="text-[3.2rem] lg:text-[6rem] font-bold 
                     lg:leading-30 lg:text-left text-center">NUESTRO SERVICIO</h1>
-        <p className="text-xl lg:text-[2.5rem] font-bold mt-5">
+        <p className="text-xl lg:text-[2rem] font-bold mt-5 text-muted-foreground">
           Nuestra cartera de servicios está diseñada para la gestión integral de
           proyectos de arquitectura y obras civiles. Como su socio estratégico,
           cubrimos desde la ingeniería conceptual hasta la ejecución constructiva
@@ -189,14 +196,21 @@ export default function Services() {
             fill
             className="object-center"
             priority
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
 
-        <a href="/contact" className={`lg:absolute text-center bottom-10 left-10 px-6 py-3 rounded-xl
-             hover:bg-gray-200 hover:text-black mt-2
-                 text-white font-bold bg-black transition-transform 
-                 hover:scale-105 duration-300 ${roboto.className}`}>
-          Contáctanos
+        <a
+          href="/contact"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group w-fit inline-flex items-center justify-center gap-2 lg:absolute
+                         text-center bottom-10 left-10 px-6 py-2 rounded-lg hover:bg-black mt-5 
+                          border-black border text-black font-bold bg-transparent transition-all
+                           duration-300 font-['roboto'] hover:text-white"
+        >
+          Contacta con nosotros
+          <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
         </a>
       </section>
 

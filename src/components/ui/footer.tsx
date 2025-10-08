@@ -2,6 +2,9 @@ import Image from "next/image"
 import Link from "next/link"
 import { Facebook, Instagram, Mail, } from "lucide-react"
 import { FaWhatsapp } from "react-icons/fa";
+import { Button } from "./button";
+import { ArrowRight } from "lucide-react";
+
 export default function Footer() {
   return (
     <footer className="bg-black text-white w-full py-10 px-6 lg:px-20">
@@ -10,7 +13,11 @@ export default function Footer() {
           {/* Left section with logo and CTA */}
           <div className="lg:col-span-5 flex flex-col items-start">
             <div className="mb-6">
-              <Image src="/images/logoB.png" alt="Logo" width={140} height={70} className="object-contain" />
+              <Image src="/images/logoB.png" 
+              alt="Logo de la empresa LAarquitecutra, empresa de venezuela barquisaimeto, Estado Lara"
+               width={140} 
+               height={70} 
+               className="object-contain w-auto h-auto" />
             </div>
 
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 leading-tight">
@@ -23,12 +30,18 @@ export default function Footer() {
               Contáctanos para más información, cotizaciones y consultas acerca de nuestros servicios
             </p>
 
-            <Link
-              href="/contact"
-              className="bg-white text-black font-semibold px-8 py-3 font-['Roboto'] rounded-2xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-white/20"
-            >
-              Contacto
-            </Link>
+            <Link href="/contact">
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="group border-white text-lg cursor-pointer  text-white
+                  hover:bg-foreground hover:text-background transition-all duration-300 bg-transparent"
+                >
+                  Agenda con nosotros
+                  <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Button>
+              </Link>
+
           </div>
 
           {/* Center section with navigation */}

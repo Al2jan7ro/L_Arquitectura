@@ -61,6 +61,7 @@ export default function PartnersSection() {
                         fill
                         className="object-contain"
                         priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 </div>
             </section>
@@ -108,6 +109,7 @@ export default function PartnersSection() {
                         fill
                         className="object-contain"
                         priority
+                        sizes="(max-width: 768px) 100vw, 50vw"
                     />
                 </div>
             </section>
