@@ -56,7 +56,7 @@ export default function Partners() {
                 {/* Columna de imagen */}
                 <div className="relative w-full h-[300px] lg:h-[400px] flex items-center justify-center">
                     <Image
-                        src="/images/T-Gaviobox.png"
+                        src="/images/gaviobox.jpg"
                         alt="Logo de Gavioty Pro Solutions, aliado de laarquitectura"
                         fill
                         className="object-contain"
