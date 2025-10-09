@@ -203,7 +203,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
           <div className="grid md:grid-cols-2 gap-12 items-center mb-12">
             <div className="relative aspect-square overflow-hidden bg-muted">
               <img
-                src={project.client.image || "/placeholder.svg"}
+                src={project.client.image}
                 alt={project.client.name}
                 className="w-full h-full object-cover"
               />
