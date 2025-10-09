@@ -5,7 +5,7 @@ import { unstable_ViewTransition as ViewTransition, Suspense } from 'react';
 import { baskervville} from "@/components/ui/fonts";
 import { ViewTransitionWrapper } from '@/components/ui/ViewTransitionWrapper';
 import VercelAnalytics from "@/components/vercel-analytics";
-import { usePathname } from 'next/navigation'
+import { headers } from 'next/headers';
 
 import "./globals.css";
 
@@ -17,13 +17,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {  
-  const pathname = usePathname();
-  const isSitemap = pathname.endsWith('/sitemap.xml');
+  const headersList = await headers();
+  const pathname = headersList.get('next-url') || '';
+  const isSitemap = pathname === '/sitemap.xml';
 
   return (
     <html lang="es">
