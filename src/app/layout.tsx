@@ -12,7 +12,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://LAarquitectura.vercel.app/'),
+  metadataBase: new URL('https://laarquitectura.vercel.app/'),
 
   icons: {
     icon: '/favicon.png',
