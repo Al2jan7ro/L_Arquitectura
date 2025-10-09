@@ -61,7 +61,7 @@ export default function ContactPage() {
                     </h1>
                     <p className="text-xl lg:text-[2rem] font-bold mb-8 text-muted-foreground">
                         Comience hoy mismo el desarrollo de su proyecto arquitectónico
-                        o civil. En L Arquitectura estamos listos para escuchar sus
+                        o civil. En LAarquitectura estamos listos para escuchar sus
                         requerimientos y convertir sus ideas en planos ejecutables.
                         Contáctenos para agendar una consulta en nuestra sede o
                         envíenos su solicitud directamente a través de nuestro formulario.
@@ -69,7 +69,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Imagen con gradiente abajo */}
-                <div className="relative w-full h-[300px] px-5 lg:px-8 mb-12 mt-50">
+                <div className="relative w-full h-[400px] px-5 lg:px-8 mb-12 mt-50">
                     <div className="w-full h-full rounded-2xl overflow-hidden relative">
                         <Image
                             src="/images/contactimg.jpg"
@@ -91,12 +91,11 @@ export default function ContactPage() {
                     <div className="container mx-auto">
                         {/* Header */}
                         <div className="mb-20">
-                            <div className="flex items-center gap-4 mb-8">
-                                <div className="h-px w-16 bg-border" />
-                                <span className="text-[2rem] font-light tracking-widest
+                            <div className="flex items-center justify-center gap-4 mb-8">
+                                <span className="text-[2rem] font-light tracking-widest text-center
                                  text-muted-foreground uppercase">Contacta con nosotros</span>
                             </div>
-                            <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-balance">
+                            <h2 className="text-center text-4xl md:text-5xl lg:text-6xl font-light tracking-tight text-balance">
                                 Hablemos de tu proyecto
                             </h2>
                         </div>

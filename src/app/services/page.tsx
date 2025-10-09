@@ -175,11 +175,11 @@ export default function Services() {
 
 
       <section className="w-[90%] mx-auto grid lg:grid-cols-2 gap-10 items-center
-         bg-yellow-50 p-10  relative my-20">
+         bg-yellow-50 p-10 px-5 lg:px-15  relative my-20">
         {/* Columna de texto */}
         <div>
           <p className="text-black text-xl md:text-2xl lg:text-[1.6rem] font-500 text-left">
-            En L Arquitectura, la <strong>Metodología BIM (Building Information Modeling)</strong>
+            En LAarquitectura, la <strong>Metodología BIM (Building Information Modeling)</strong>
             es nuestro estándar para la excelencia operativa. Este enfoque integral
             genera modelos digitales inteligentes que cubren desde el diseño conceptual
             hasta la ejecución. Implementamos BIM para garantizar la detección temprana

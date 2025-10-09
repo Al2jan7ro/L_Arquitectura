@@ -24,7 +24,7 @@ export default function services() {
             items-center mt-0 lg:mt-50  w-full px-5 lg:px-15">
                     <div>
                         <h1 className="text-[2.5rem] font-bold mb-5 lg:text-left text-center">
-                            TE OFRECEMOS
+                            NOSOTROS TE OFRECEMOS
                         </h1>
 
                     </div>

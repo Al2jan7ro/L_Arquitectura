@@ -2,16 +2,16 @@
 
 <div align="center">
 
-![Architecture](https://img.shields.io/badge/Architecture-Professional-blue?style=for-the-badge)
 ![Next.js](https://img.shields.io/badge/Next.js-15.5.3-black?style=for-the-badge&logo=next.js)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?style=for-the-badge&logo=typescript)
 ![TailwindCSS](https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css)
+![Biome](https://img.shields.io/badge/Biome-Linter_&_Formatter-60A5FA?style=for-the-badge&logo=biome)
 
-**Sitio web profesional para estudio de arquitectura e ingeniería civil**
+**Sitio web profesional para un estudio de arquitectura e ingeniería civil**
 
 *Transformando ideas en espacios funcionales y estéticamente excepcionales*
 
-[🌐 Ver Demo](#) • [📧 Contacto](#contacto) • [📋 Servicios](#servicios)
+
 
 </div>
 
@@ -68,42 +68,6 @@ Implementación de **Building Information Modeling** para:
 
 </div>
 
-### 📦 **Dependencias Principales**
-```json
-{
-  "next": "15.5.3",
-  "react": "19.1.0",
-  "gsap": "^3.13.0",
-  "tailwindcss": "^4",
-  "typescript": "^5",
-  "lucide-react": "^0.544.0"
-}
-```
-
----
-
-## 🏗️ **Estructura del Proyecto**
-
-```
-la_arquitectura/
-├── 📁 src/
-│   ├── 📁 app/
-│   │   ├── 🏠 page.tsx          # Página principal
-│   │   ├── 📋 services/         # Servicios detallados
-│   │   ├── 👥 about/            # Sobre nosotros
-│   │   ├── 📞 contact/          # Contacto y formularios
-│   │   └── 🖼️ projects/         # Portafolio de proyectos
-│   ├── 📁 components/
-│   │   ├── 🎨 ui/               # Componentes de interfaz
-│   │   ├── 🦸 hero/             # Sección hero
-│   │   ├── 📋 services/         # Componentes de servicios
-│   │   └── 📞 contact/          # Formularios de contacto
-│   └── 📁 data/                 # Datos y configuraciones
-├── 📁 public/
-│   ├── 🖼️ images/              # Imágenes del sitio
-│   └── 🎥 assets/              # Videos y recursos
-└── 📄 README.md
-```
 
 ---
 

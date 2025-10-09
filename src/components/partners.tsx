@@ -80,8 +80,8 @@ export default function Partners() {
                          Civil Saúl El Chaer, es nuestro socio constructor de confianza.
                           Su especialización en la ejecución de obras civiles y estructuras 
                           de ingeniería de campo aporta la solidez técnica indispensable para
-                           materializar nuestros diseños. En <span className="font-semibold">L'
-                            Arquitectura</span>, asumimos la Gerencia de Obra, creando una sinergia 
+                           materializar nuestros diseños. En <span className="font-semibold">LAarquitectura</span>,
+                            asumimos la Gerencia de Obra, creando una sinergia 
                             donde nuestra supervisión y la precisión de SAECA convergen para asegurar
                              la máxima calidad y el éxito de cada proyecto, desde su concepción hasta
                              la entrega final.

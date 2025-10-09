@@ -47,7 +47,7 @@ export default function About() {
               </h1>
 
               <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed mb-10">
-                L Arquitectura está dedicado a plasmar tus proyectos arquitectónicos, sean pequeños o grandes, a través
+                LAarquitectura está dedicado a plasmar tus proyectos arquitectónicos, sean pequeños o grandes, a través
                 de todas sus fases de creación. Nos esforzamos en todo el desarrollo hasta lograr que la obra se asemeje
                 a tus sueños.
               </p>
