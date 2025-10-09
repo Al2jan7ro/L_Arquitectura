@@ -20,21 +20,21 @@ const team = [
         role: "Arquitecto Principal",
         email: "Arqtoleocarrero@gmail.com",
         phone: "+58 412 7644744",
-        image: "/images/ingleo.jpg",
+        image: "/images/ingleo.webp",
     },
     {
         name: "Ing. Luis Guillen",
         role: "Ingeniero Civil",
         email: "guillenphenry@gmail.com",
         phone: "+58 426 7779108",
-        image: "/images/ingluis.jpg",
+        image: "/images/ingluis.webp",
     },
     {
         name: "Ing. Saul El Chaaer ",
         role: "Ingeniero Civil",
         email: "selchaer15@gmail.com",
         phone: "+58 412 5230959",
-        image: "/images/ingsaul.png",
+        image: "/images/ingsaul.webp",
     },
 ]
 
@@ -72,7 +72,7 @@ export default function ContactPage() {
                 <div className="relative w-full h-[400px] px-5 lg:px-8 mb-12 mt-50">
                     <div className="w-full h-full rounded-2xl overflow-hidden relative">
                         <Image
-                            src="/images/contactimg.jpg"
+                            src="/images/contactimg.webp"
                             alt="Imagen de fondo, pagina de contacto"
                             fill
                             className="object-cover"

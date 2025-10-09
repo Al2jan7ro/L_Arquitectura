@@ -191,7 +191,7 @@ export default function Services() {
         {/* Columna de imagen */}
         <div className="relative rounded-2xl overflow-hidden h-full min-h-[300px] lg:min-h-[500px]">
           <Image
-            src="/images/bimservices.jpg"
+            src="/images/bimservices.webp"
             alt="Imagen de arquitectura para mostrar los servicios de la empresa LArquitectura"
             fill
             className="object-center"

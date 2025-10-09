@@ -184,7 +184,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
           {project.images.slice(1).map((image: string, index: number) => (
             <div key={index} className="relative aspect-[4/3] overflow-hidden bg-muted">
               <img
-                src={image || "/placeholder.svg"}
+                src={image}
                 alt={`${project.title} - imagen ${index + 2}`}
                 className="w-full h-full object-cover"
               />

@@ -67,7 +67,7 @@ export default function About() {
 
             <div className="relative overflow-hidden rounded-sm h-[500px] lg:h-[600px]">
               <Image
-                src="/images/abt-arq.jpg"
+                src="/images/abt-arq.webp"
                 alt="Equipo de LArquitectura trabajando en proyecto"
                 fill
                 className="object-cover"

@@ -9,8 +9,8 @@ const projectsData: Record<string, any> = {
     category: "Deportivo",
     heroVideo: "/projects/furiafit/furiafit.mp4",
     images: [
-      "/projects/furiafit/ElReto.jpg",
-      "/projects/furiafit/furiaimg3.jpg",
+      "/projects/furiafit/ElReto.webp",
+      "/projects/furiafit/furiaimg3.webp",
     ],
     galleryVideo: "/projects/furiafit/furiaobra.mp4",
     concept: {
@@ -41,7 +41,7 @@ const projectsData: Record<string, any> = {
       instagram: "https://www.instagram.com/frfit.ve/",
       facebook: "https://www.facebook.com/p/FR-FIT-100091249265263/",
       tiktok: "https://www.tiktok.com/@frfit.ve",
-      image: "/projects/furiafit/FRlogo.jpg",
+      image: "/projects/furiafit/FRlogo.webp",
     },
   },
 
@@ -55,8 +55,8 @@ const projectsData: Record<string, any> = {
     category: "Comercial, Depósito y Residencial",
     heroVideo: "/projects/banyan/banyanhero.mp4",
     images: [
-      "/projects/banyan/banyanimg1.png",
-      "/projects/banyan/banyanimg2.jpg",
+      "/projects/banyan/banyanimg1.webp",
+      "/projects/banyan/banyanimg2.webp",
       
     ],
     galleryVideo: "/projects/banyan/banyanvideo.mp4",
@@ -89,7 +89,7 @@ const projectsData: Record<string, any> = {
       instagram: "https://www.instagram.com/banyancaoficial/?hl=es",
       tiktok: "https://www.tiktok.com/@banyancaoficial",
       Whatsapp: "https://api.whatsapp.com/send?phone=584145228887",
-      image: "/projects/banyan/banyanLogo.jpg",
+      image: "/projects/banyan/banyanlogo.webp",
     },
   },
 

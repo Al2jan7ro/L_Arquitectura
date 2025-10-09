@@ -56,7 +56,7 @@ export default function Partners() {
                 {/* Columna de imagen */}
                 <div className="relative w-full h-[300px] lg:h-[400px] flex items-center justify-center">
                     <Image
-                        src="/images/gaviobox.jpg"
+                        src="/images/gaviobox.webp"
                         alt="Logo de Gavioty Pro Solutions, aliado de laarquitectura"
                         fill
                         className="object-contain"
@@ -105,7 +105,7 @@ export default function Partners() {
                 {/* Columna de imagen */}
                 <div className="relative w-full h-[300px] lg:h-[400px] flex items-center justify-center lg:order-1">
                     <Image
-                        src="/images/logosaeca.jpg"
+                        src="/images/logosaeca.webp"
                         alt="Logo de la empresa ingeniería SAECA, aliado de laarquitectura"
                         fill
                         className="object-contain"

@@ -21,14 +21,14 @@ export const SERVICES_SEO: SeoData = {
   title: "Servicios Integrales de Arquitectura e Ingeniería",
   description: "Descubre nuestra cartera de servicios: arquitectura, diseño estructural, instalaciones eléctricas, hidrosanitarias, mecánicas y construcción con metodología BIM.",
   pathname: "/services",
-  imageUrl: "/images/bimservices.jpg" // Imagen representativa de la página
+  imageUrl: "/images/bimservices.webp" // Imagen representativa de la página
 };
 
 export const PROJECTS_SEO: SeoData = {
     title: "Portafolio de Proyectos",
     description: "Explora una selección de nuestros proyectos, desde centros deportivos de alto rendimiento hasta desarrollos comerciales y residenciales.",
     pathname: "/projects",
-    imageUrl: "/images/landing2.jpg" // Imagen general de proyectos
+    imageUrl: "/images/landing2.webp" // Imagen general de proyectos
 };
 
 export const ABOUT_SEO: SeoData = {

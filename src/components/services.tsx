@@ -81,7 +81,7 @@ export default function services() {
                     {/* Columna imagen */}
                     <div className="relative rounded-2xl overflow-hidden h-full min-h-[400px]">
                         <Image
-                            src="/images/landing2.jpg"
+                            src="/images/landing2.webp"
                             alt="Imagen de arquitectura para mostrar los servicios de la empresa LArquitectura"
                             fill
                             className="object-cover"
