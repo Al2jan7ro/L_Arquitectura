@@ -4,10 +4,8 @@ import Footer from "@/components/ui/footer";
 import { unstable_ViewTransition as ViewTransition, Suspense } from 'react';
 import { baskervville} from "@/components/ui/fonts";
 import { ViewTransitionWrapper } from '@/components/ui/ViewTransitionWrapper';
-import { Analytics } from '@vercel/analytics/next';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-
-
+import VercelAnalytics from "@/components/vercel-analytics";
+import { usePathname } from 'next/navigation'
 
 import "./globals.css";
 
@@ -24,6 +22,9 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {  
+  const pathname = usePathname();
+  const isSitemap = pathname.endsWith('/sitemap.xml');
+
   return (
     <html lang="es">
         <body className={`min-h-screen flex flex-col w-full ${baskervville .className} antialiased`} suppressHydrationWarning={true}>
@@ -32,8 +33,8 @@ export default function RootLayout({
           <Suspense>
             <ViewTransitionWrapper>
               {children}
-              <Analytics />
-              <SpeedInsights />
+              {/* Solo renderizar en el cliente y no en el sitemap */}
+              {!isSitemap && <VercelAnalytics />}
             </ViewTransitionWrapper>
           </Suspense>
         </main>
