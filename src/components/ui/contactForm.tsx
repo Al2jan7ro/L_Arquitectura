@@ -70,7 +70,9 @@ export default function ContactForm() {
           </button>
         </div>
 
-        <form ref={formRef} onSubmit={handleSubmit} action="" method="POST"
+        <form ref={formRef} onSubmit={handleSubmit} 
+          action="https://formspree.io/f/mdkwlqbg" 
+          method="POST"
           className="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
           {/* Nombre */}

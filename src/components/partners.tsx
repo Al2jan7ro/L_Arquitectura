@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
-export default function PartnersSection() {
+export default function Partners() {
     return (
 
         <>
@@ -76,19 +76,20 @@ export default function PartnersSection() {
                     
                     <p className="text-[#1a1a1a] text-base md:text-lg lg:text-[1.3rem]  
                     leading-relaxed text-center lg:text-left ">
-                        <span className="font-semibold">SAECA </span> es nuestro socio principal
-                        en soluciones estructurales, liderado por el Gerente General
-                        Licenciado Arquímedes Velásquez Díaz. Son expertos en gaviones y muros de
-                        retención sostenibles con tecnología certificada para la estabilización
-                        de terrenos. <span className="font-semibold">LAarquitectura</span> integra su diseño con la
-                        precisión técnica de GPS, garantizando la estabilidad y calidad de la obra.
-                        Colaboramos en grandes proyectos de infraestructura, control de erosión y
-                        paisajismo complejo.
+                        <span className="font-semibold">Ingeniería SAECA C.A.</span>, bajo la dirección del Ing.
+                         Civil Saúl El Chaer, es nuestro socio constructor de confianza.
+                          Su especialización en la ejecución de obras civiles y estructuras 
+                          de ingeniería de campo aporta la solidez técnica indispensable para
+                           materializar nuestros diseños. En <span className="font-semibold">L'
+                            Arquitectura</span>, asumimos la Gerencia de Obra, creando una sinergia 
+                            donde nuestra supervisión y la precisión de SAECA convergen para asegurar
+                             la máxima calidad y el éxito de cada proyecto, desde su concepción hasta
+                             la entrega final.
                     </p>
 
                     {/* Botón */}
                     <a
-                        href=""
+                        href="https://www.instagram.com/ingenieriasaeca/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group w-fit inline-flex items-center justify-center gap-2 lg:absolute

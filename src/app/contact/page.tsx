@@ -1,6 +1,7 @@
 import ContactForm from '@/components/ui/contactForm';
 import { BusinessHours } from "@/components/ui/horarios"
-import { Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react"
+import { Instagram, Facebook, Mail, MapPin, Phone } from "lucide-react"
+import { FaWhatsapp } from "react-icons/fa";
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import Image from 'next/image';
@@ -15,32 +16,38 @@ export function generateMetadata(): Metadata {
 
 const team = [
     {
-        name: "Ing. Leonardo Pérez",
+        name: "Arq. Leonardo Carrero",
         role: "Arquitecto Principal",
-        email: "leo.perez@email.com",
-        phone: "+58 414 1234567",
-        image: "/images/ingsaul.png",
+        email: "Arqtoleocarrero@gmail.com",
+        phone: "+58 412 7644744",
+        image: "/images/ingleo.jpg",
     },
     {
         name: "Ing. Luis Guillen",
         role: "Ingeniero Civil",
         email: "guillenphenry@gmail.com",
-        phone: "+58 424 5283033",
-        image: "/images/ingsaul.png",
+        phone: "+58 426 7779108",
+        image: "/images/ingluis.jpg",
     },
     {
-        name: "Saul",
-        role: "Diseñadora de Interiores",
-        email: "maria.gonzalez@email.com",
-        phone: "+58 412 7654321",
+        name: "Ing. Saul El Chaaer ",
+        role: "Ingeniero Civil",
+        email: "selchaer15@gmail.com",
+        phone: "+58 412 5230959",
         image: "/images/ingsaul.png",
     },
 ]
 
 const socialLinks = [
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
-    { icon: Facebook, href: "https://facebook.com", label: "Facebook" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: Instagram, 
+        href: "https://www.instagram.com/leo.luis.arquitectura/?hl=es-la", 
+        label: "Instagram" },
+    { icon: FaWhatsapp,
+         href: "https://wa.me/584267779108?text=¡Hola!%20Me%20gustaría%20explorar%20cómo%20LArquitectura%20puede%20ayudarme%20con%20mi%20próximo%20proyecto.%20¿Podemos%20conversar?", 
+         label: "Whatsapp" },
+    { icon: Mail, 
+        href: "https://mail.google.com/mail/?view=cm&fs=1&to=leo.henry.asociados@gmail.com&su=Consulta%20de%20Proyecto:%20¡Transformemos%20tu%20visión%20con%20LArquitectura!&body=Hola%20equipo%20de%20LArquitectura,%0A%0AMe%20interesa%20conocer%20más%20sobre%20sus%20servicios%20para%20un%20proyecto%20que%20tengo%20en%20mente.%20¿Podrían%20proporcionarme%20más%20detalles%20o%20indicarme%20los%20próximos%20pasos?%0A%0AGracias.", 
+        label: "Gmail" },
 ]
 export default function ContactPage() {
     return (
@@ -112,18 +119,22 @@ export default function ContactPage() {
                                         <p className="text-sm font-light tracking-widest text-muted-foreground uppercase mb-6">{member.role}</p>
                                         <div className="space-y-3">
                                             <a
-                                                href={`mailto:${member.email}`}
+                                                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${member.email}&su=Consulta%20de%20Proyecto%20con%20LArquitectura&body=Hola%20${member.name.split(' ')[0]},%0A%0AEstoy%20interesado(a)%20en%20discutir%20un%20proyecto%20y%20me%20gustaría%20saber%20más%20sobre%20sus%20servicios.%0A%0AGracias.`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                                 className="flex items-center justify-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                                             >
                                                 <Mail className="w-4 h-4" strokeWidth={1.5} />
                                                 <span className="text-sm font-light">{member.email}</span>
                                             </a>
                                             <a
-                                                href={`tel:${member.phone.replace(/\s/g, "")}`}
+                                                href={`https://wa.me/${member.phone.replace(/\s/g, "")}?text=¡Hola%20${member.name.split(' ')[0]}!%20Me%20gustaría%20explorar%20cómo%20LArquitectura%20puede%20ayudarme%20con%20mi%20próximo%20proyecto.%20¿Podemos%20conversar?`}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
                                                 className="flex items-center justify-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
                                             >
                                                 <Phone className="w-4 h-4" strokeWidth={1.5} />
-                                                <span className="text-sm font-light">{member.phone}</span>
+                                                <span className="text-sm font-light font-['roboto']">{member.phone}</span>
                                             </a>
                                         </div>
                                     </div>
@@ -134,7 +145,7 @@ export default function ContactPage() {
                         {/* Location & Social */}
                         <div className="grid md:grid-cols-2 gap-12 lg:gap-15 mb-20">
                             <Card className="p-10 border-border bg-transparent">
-                                <MapPin className="w-10 h-10 mb-6 text-foreground" strokeWidth={1} />
+                                <MapPin className="w-10 h-10 mb-6 text-foreground"  />
                                 <h3 className="text-2xl font-light mb-4">¿Dónde estamos?</h3>
                                 <p className="text-lg text-muted-foreground font-light leading-relaxed mb-2">
                                     Nuestra oficina principal está ubicada en:
@@ -146,7 +157,7 @@ export default function ContactPage() {
                             <Card className="p-10 border-border bg-transparent">
                                 <div className="flex items-center gap-3 mb-6">
                                     {socialLinks.map((social, index) => (
-                                        <social.icon key={index} className="w-10 h-10 text-foreground" strokeWidth={1} />
+                                        <social.icon key={index} className="w-10 h-10 text-foreground" />
                                     ))}
                                 </div>
                                 <h3 className="text-2xl font-light mb-4">Síguenos en redes sociales</h3>

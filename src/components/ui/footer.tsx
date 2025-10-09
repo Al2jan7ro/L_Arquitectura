@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Facebook, Instagram, Mail, } from "lucide-react"
+import { Facebook, Instagram, Mail, Linkedin, Globe } from "lucide-react"
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "./button";
 import { ArrowRight } from "lucide-react";
@@ -97,8 +97,27 @@ export default function Footer() {
         </div>
 
         {/* Bottom section */}
-        <div className="border-t border-white/10 pt-6">
-          <p className="text-md text-gray-300 font-bold">Desarrollado por Al2jan7ro.  &copy;2025 Todos los derechos reservados.</p>
+        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex items-center gap-3">
+            <p className="text-md text-white font-['roboto']">Desarrollado por Al2jan7ro</p>
+            <a href="https://www.linkedin.com/in/al2jan7ro" 
+            target="_blank" 
+            rel="noopener noreferrer"
+             aria-label="LinkedIn de Al2jan7ro"
+             className="text-white hover:text-gray-500 transition-colors">
+                <Linkedin className="w-5 h-5" />
+            </a>
+            <a href="https://al2jan7ro.vercel.app/" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            aria-label="Portafolio de Al2jan7ro" 
+            className="text-white hover:text-gray-500 transition-colors">
+                <Globe className="w-5 h-5" />
+            </a>
+          </div>
+          <p className="text-md text-white font-['roboto'] text-center sm:text-right">
+            LAarquitectura &copy; {new Date().getFullYear()} Todos los derechos reservados.
+          </p>
         </div>
       </div>
     </footer>

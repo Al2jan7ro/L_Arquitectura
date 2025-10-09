@@ -4,11 +4,15 @@ import Footer from "@/components/ui/footer";
 import { unstable_ViewTransition as ViewTransition, Suspense } from 'react';
 import { baskervville} from "@/components/ui/fonts";
 import { ViewTransitionWrapper } from '@/components/ui/ViewTransitionWrapper';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+
+
 
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://www.larquitectura.com'),
+  metadataBase: new URL('https://LAarquitectura.vercel.app/'),
 
   icons: {
     icon: '/favicon.png',
@@ -28,6 +32,8 @@ export default function RootLayout({
           <Suspense>
             <ViewTransitionWrapper>
               {children}
+              <Analytics />
+              <SpeedInsights />
             </ViewTransitionWrapper>
           </Suspense>
         </main>

@@ -202,8 +202,7 @@ export default function Services() {
 
         <a
           href="/contact"
-          target="_blank"
-          rel="noopener noreferrer"
+          
           className="group w-fit inline-flex items-center justify-center gap-2 lg:absolute
                          text-center bottom-10 left-10 px-6 py-2 rounded-lg hover:bg-black mt-5 
                           border-black border text-black font-bold bg-transparent transition-all

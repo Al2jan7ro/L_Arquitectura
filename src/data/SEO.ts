@@ -11,12 +11,12 @@ interface SeoProps {
 
 // Valores por defecto para el SEO del sitio.
 const defaultMeta = {
-  title: 'L Arquitectura | Arquitectura e Ingeniería Civil',
+  title: 'LAarquitectura | Arquitectura e Ingeniería Civil',
   description: 'Estudio de arquitectura e ingeniería civil. Transformamos ideas en espacios funcionales y estéticamente excepcionales en Venezuela y más allá.',
-  siteName: 'L Arquitectura',
+  siteName: 'LAarquitectura',
   // Reemplaza con la URL de tu logo o una imagen genérica para compartir.
   imageUrl: '/images/logoB.png', 
-  baseUrl: 'https://www.larquitectura.com', 
+  baseUrl: 'https://LAarquitectura.vercel.app/', 
 };
 
 

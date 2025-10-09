@@ -9,10 +9,10 @@ export default function BentoGrid() {
     return (
         <div className="container mx-auto px-6 py-20">
                 <h1 className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-foreground text-balance">
-                    Diseños de Autor: Vanguardia en Espacios Habitacionales
+                    Proyectos que Definen Espacios
                 </h1>
                 <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-2xl font-light leading-relaxed">
-                    Cada proyecto es una exploración de la arquitectura contemporánea aplicada al hogar, creando residencias exclusivas que transforman la experiencia de vivir.
+                    Desde centros comerciales y médicos hasta residencias exclusivas, cada diseño es una muestra de nuestra versatilidad y compromiso con la arquitectura que transforma la experiencia humana.
                 </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-[300px] mt-20">
                 {projects.map((project) => (

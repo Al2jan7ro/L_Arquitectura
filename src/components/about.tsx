@@ -52,7 +52,7 @@ export default function About() {
                 a tus sueños.
               </p>
 
-              <Link href="/proyects">
+              <Link href="/projects">
                 <Button
                   variant="outline"
                   size="lg"

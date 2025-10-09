@@ -11,8 +11,8 @@ const projectsData: Record<string, any> = {
     images: [
       "/projects/furiafit/ElReto.jpg",
       "/projects/furiafit/furiaimg3.jpg",
-      "/projects/furiafit/furiaimg2.jpg",
     ],
+    galleryVideo: "/projects/furiafit/furiaobra.mp4",
     concept: {
       title: "Energía en Movimiento",
       description:
@@ -40,6 +40,7 @@ const projectsData: Record<string, any> = {
       website: "https://furiafit.com/",
       instagram: "https://www.instagram.com/frfit.ve/",
       facebook: "https://www.facebook.com/p/FR-FIT-100091249265263/",
+      tiktok: "https://www.tiktok.com/@frfit.ve",
       image: "/projects/furiafit/FRlogo.jpg",
     },
   },
@@ -56,8 +57,10 @@ const projectsData: Record<string, any> = {
     images: [
       "/projects/banyan/banyanimg1.png",
       "/projects/banyan/banyanimg2.jpg",
-      "/projects/banyan/banyanimg3.png",
+      
     ],
+    galleryVideo: "/projects/banyan/banyanvideo.mp4",
+
     concept: {
       title: "Edificación de Usos Mixtos",
       description:
@@ -82,8 +85,9 @@ const projectsData: Record<string, any> = {
     client: {
       name: "Banyan C.A - Audio & Sonido",
       description: "Tienda de audio y sonido especializada en sonido para automóviles, sonido profesional, instrumentos musicales y más",
+      website: "https://linktr.ee/banyansonidoyaudio?utm_source=linktree_profile_share&ltsid=a8322f46-659a-46a7-893d-b315ead84435",
       instagram: "https://www.instagram.com/banyancaoficial/?hl=es",
-      Tiktok: "https://www.tiktok.com/@banyancaoficial",
+      tiktok: "https://www.tiktok.com/@banyancaoficial",
       Whatsapp: "https://api.whatsapp.com/send?phone=584145228887",
       image: "/projects/banyan/banyanLogo.jpg",
     },

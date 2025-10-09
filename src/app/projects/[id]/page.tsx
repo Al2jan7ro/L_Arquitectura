@@ -1,9 +1,10 @@
 import Link from "next/link"
-import { ArrowLeft, Instagram, Facebook, Globe } from "lucide-react"
+import { ArrowLeft, Instagram, Facebook, Globe, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import projectsData from "@/data/projectsData";
 import { generateSeoMetadata } from "@/data/SEO";
 import { Metadata } from "next";
+import { FaTiktok } from "react-icons/fa";
 
 export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
   const { id } = await params; const projectId = decodeURIComponent(id);
@@ -87,7 +88,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
 
         {/* Hero Image */}
         <div className="relative aspect-[16/9] overflow-hidden bg-muted">
-          {(projectId === "FuriaFit" || projectId === "Banyan") ? (
+          {project.heroVideo ? (
             <video
               src={project.heroVideo}
               autoPlay
@@ -98,7 +99,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
             />
           ) : (
             <img
-              src={project.heroImage || "/placeholder.svg"}
+              src={project.heroImage}
               alt={project.title}
               className="w-full h-full object-cover"
             />
@@ -167,7 +168,19 @@ export default async function ProjectPage({ params }: { params: { id: string } }
 
       {/* Image Gallery */}
       <section className="container mx-auto px-6 py-20">
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 items-start">
+          {project.galleryVideo && (
+            <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+              <video
+                src={project.galleryVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+              />
+            </div>
+          )}
           {project.images.slice(1).map((image: string, index: number) => (
             <div key={index} className="relative aspect-[4/3] overflow-hidden bg-muted">
               <img
@@ -208,7 +221,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                   className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors group"
                 >
                   <Globe className="h-5 w-5" />
-                  <span className="font-light group-hover:underline font-['roboto]">Visitar sitio web</span>
+                  <span className="font-light group-hover:underline font-['roboto'] cursor-pointer">Visitar sitio web</span>
                 </a>
                 <a
                   href={project.client.instagram}
@@ -217,7 +230,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                   className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors group"
                 >
                   <Instagram className="h-5 w-5" />
-                  <span className="font-light group-hover:underline font-['roboto]">Seguir en Instagram</span>
+                  <span className="font-light group-hover:underline font-['roboto'] cursor-pointer">Seguir en Instagram</span>
                 </a>
                 <a
                   href={project.client.facebook}
@@ -226,8 +239,19 @@ export default async function ProjectPage({ params }: { params: { id: string } }
                   className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors group"
                 >
                   <Facebook className="h-5 w-5" />
-                  <span className="font-light group-hover:underline font-['roboto]">Seguir en Facebook</span>
+                  <span className="font-light group-hover:underline font-['roboto'] cursor-pointer">Seguir en Facebook</span>
                 </a>
+                {project.client.tiktok && (
+                  <a
+                    href={project.client.tiktok}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors group"
+                  >
+                    <FaTiktok className="h-5 w-5" />
+                    <span className="font-light group-hover:underline font-['roboto'] cursor-pointer">Seguir en TikTok</span>
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -235,7 +259,7 @@ export default async function ProjectPage({ params }: { params: { id: string } }
           <div className="text-center">
             <Button
               size="lg"
-              className="bg-foreground text-background hover:bg-foreground/90 transition-all font-['roboto'] duration-300"
+              className="bg-foreground text-background hover:bg-foreground/90 cursor-pointertransition-all font-['roboto'] duration-300"
               asChild
             >
               <a href={project.client.website} target="_blank" rel="noopener noreferrer">
