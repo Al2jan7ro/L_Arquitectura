@@ -16,7 +16,7 @@ const defaultMeta = {
   siteName: 'LAarquitectura',
   // Reemplaza con la URL de tu logo o una imagen genérica para compartir.
   imageUrl: '/images/logoB.png', 
-  baseUrl: 'https://laarquitectura.vercel.app', 
+  baseUrl: 'https://laarquitectura.vercel.app',
 };
 
 

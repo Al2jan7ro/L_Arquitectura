@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import projectsData from '@/data/projectsData';
+import featuredProjects from '@/data/BestProjectsData';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://laarquitectura.vercel.app';
@@ -19,9 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   // Rutas dinámicas para cada proyecto
-  const projectIds = Object.keys(projectsData);
-  const projectRoutes = projectIds.map((id) => ({
-    url: `${baseUrl}/projects/${id}`,
+  const projectRoutes = featuredProjects.map((project) => ({
+    url: `${baseUrl}/projects/${project.url}`,
     lastModified: new Date().toISOString(),
     changeFrequency: 'weekly' as 'weekly',
     priority: 0.7,
