@@ -11,7 +11,7 @@ interface SeoData {
 }
 
 export const HOME_SEO: SeoData = {
-  title: "LAarquitectura | Arquitectura e Ingeniería Civil",
+  title: "LArquitectura | Arquitectura e Ingeniería Civil",
   description: "Estudio de arquitectura e ingeniería civil. Transformamos ideas en espacios funcionales y estéticamente excepcionales en Venezuela y más allá.",
   pathname: "/",
   // La imagen usará el valor por defecto de SEO.ts

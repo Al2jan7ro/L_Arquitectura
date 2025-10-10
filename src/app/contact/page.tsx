@@ -61,7 +61,7 @@ export default function ContactPage() {
                     </h1>
                     <p className="text-xl lg:text-[2rem] font-bold mb-8 text-muted-foreground">
                         Comience hoy mismo el desarrollo de su proyecto arquitectónico
-                        o civil. En LAarquitectura estamos listos para escuchar sus
+                        o civil. En LArquitectura estamos listos para escuchar sus
                         requerimientos y convertir sus ideas en planos ejecutables.
                         Contáctenos para agendar una consulta en nuestra sede o
                         envíenos su solicitud directamente a través de nuestro formulario.

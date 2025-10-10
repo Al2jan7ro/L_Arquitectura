@@ -12,7 +12,7 @@ export default function Partners() {
                 <h1 className="text-[3.2rem] lg:text-[6rem] font-bold 
                     lg:leading-30 lg:text-left text-center">CONOCE SOBRE NUESTROS SOCIOS</h1>
                 <p className="text-xl lg:text-[2rem] text-muted-foreground font-light mt-5">
-                    En LAarquitectura, creemos que el éxito de cada proyecto se basa en la colaboración.
+                    En LArquitectura, creemos que el éxito de cada proyecto se basa en la colaboración.
                     Por eso, nos asociamos con empresas líderes y profesionales que comparten nuestra visión
                     de excelencia, innovación y rigor técnico.
                 </p>
@@ -32,7 +32,7 @@ export default function Partners() {
                         en soluciones estructurales, liderado por el Gerente General
                         Licenciado Arquímedes Velásquez Díaz. Son expertos en gaviones y muros de
                         retención sostenibles con tecnología certificada para la estabilización
-                        de terrenos. <span className="font-semibold">LAarquitectura</span> integra su diseño con la
+                        de terrenos. <span className="font-semibold">LArquitectura</span> integra su diseño con la
                         precisión técnica de GPS, garantizando la estabilidad y calidad de la obra.
                         Colaboramos en grandes proyectos de infraestructura, control de erosión y
                         paisajismo complejo.
@@ -80,7 +80,7 @@ export default function Partners() {
                          Civil Saúl El Chaer, es nuestro socio constructor de confianza.
                           Su especialización en la ejecución de obras civiles y estructuras 
                           de ingeniería de campo aporta la solidez técnica indispensable para
-                           materializar nuestros diseños. En <span className="font-semibold">LAarquitectura</span>,
+                           materializar nuestros diseños. En <span className="font-semibold">LArquitectura</span>,
                             asumimos la Gerencia de Obra, creando una sinergia 
                             donde nuestra supervisión y la precisión de SAECA convergen para asegurar
                              la máxima calidad y el éxito de cada proyecto, desde su concepción hasta
